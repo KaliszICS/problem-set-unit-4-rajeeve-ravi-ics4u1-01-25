@@ -1,28 +1,27 @@
-import sun.awt.windows.WPrinterJob;
-
 import java.util.ArrayList;
-
+// the class Card with a purpose of making 3 parameters
 class Card {
     //Instance of variables
     String name;
     String suit;
     int number;
-    //
+    
     public Card(String name, String suit, int number) {
         this.name = name;
         this.suit = suit;
         this.number = number;
 
     }
+    
     public String getName() {
         return name;
     }
-
+    
     public String getSuit() {
         return suit;
 
     }
-
+   
     int getNumber() {
         return number;
 
@@ -35,6 +34,7 @@ class Card {
         this.suit = suit;
         return null;
     }
+    // the order of how the cards will be labeled
     public void  setNumber(int number) {
         this.number = number;
     }
@@ -43,10 +43,10 @@ class Card {
     }
 
     }
-    //
+// the constructor #1 Takes an array of cards
 class Deck {
     ArrayList<Card> deck;
-
+//
     Deck(Card[] cards) {
         deck = new ArrayList<>();
         for (Card card : cards) {
@@ -56,7 +56,7 @@ class Deck {
         }
     }
 
-    // Constructor #2 creates an unshuffled deck
+    // the constructor #2 creates an unshuffled deck
     public Deck() {
         deck = new ArrayList<>();
         String[] suits = {"Hearts", "Clubs", "Diamonds", "Spades"};
@@ -65,6 +65,7 @@ class Deck {
         for (int i = 0; i < number.length; i++) {
             deck.add(new Card(names[i], suits[i], number[i]));
         }
+        // all the cards(52 of them)
         int size = deck.size();
         for (int i = 0; i < size; i++) {
             deck.get(i).setNumber(i);
@@ -78,7 +79,7 @@ class Deck {
         }
 
     }
-    //
+    // Shuffles the deck of cards
     public void shuffle() {
         for (int i = 0; i < deck.size(); i++) {
             int j = (i + 1) % deck.size();
@@ -89,13 +90,13 @@ class Deck {
         }
 
     }
-    //
+    // adds cards back into the deck
     public void addCard(Card card) {
         if (card != null) {
             deck.add(card);
         }
     }
-    //
+    // reshuffles the deck of cards
     public void reshuffle() {
         for (Card card : deck) {
             if (card != null) {
@@ -104,13 +105,13 @@ class Deck {
             shuffle();
         }
     }
-    //
+    //print system for main class
     public void print() {
         for (Card card : deck) {
             System.out.println(card);
         }
     }
-    //
+    //meant to print the cdeck of cards
     public class mainClass {
         public void main(String[] args) {
             Deck deck = new Deck();
