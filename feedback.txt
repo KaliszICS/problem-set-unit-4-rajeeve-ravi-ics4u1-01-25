@@ -1,0 +1,17 @@
+K(30%): 90%
+I(30%): 65%
+C(10%): 50%
+A(30%): 70%
+72.5 of 80% - 58%
+
+Classes should be in separate files
+Missing javadocs
+Remember to use the names outlined in the instructions (value instead of number for Card)
+value should not be part of the toString for the card.
+Missing equals() method for card.
+Do not alter the value given to you when storing it (removing null values from deck).  Null values did not need to be dealt with until option 3
+Creating a new deck will go out of bounds (use multiple looks to set the name and suit)
+shuffle is not random
+reshuffle did not add cards.
+print should not exist.
+Great attempt!
